@@ -1,0 +1,5 @@
+dotnet new <Ten tamplate> --name <Ten project> : Tao project
+dotnet sln <Ten file co duoi la sln> add <Duong dan toi project> :Them project vao sln
+dotnet add <Ten project> reference <Ten project muon reference>: reference toi mot project
+dotnet run -p <Duong dan toi Project Can chay>: Chay mot project
+

@@ -1,0 +1,92 @@
+các câu lệnh sử dụng Postgrea SQL
+su - postgres:login vao postgre user
+$ sudo -i -u postgres : ket noi voi datat base
+$ psql : su dung de thao tac voi co so du lieu
+postgres=# \l : liet ke cac database trong csdl
+postgres=# \q :thoat ket noi
+
+
+------------------------Doi mat khau---------------
+sudo -u postgres psql:login vao csdl voi quyen root 
+ALTER USER postgres PASSWORD 'newpassword'; :thay doi mat khau
+psql -U postgres -h localhost :login vao postgreSql voi mat khau vua moi tao
+
+
+
+---------------------tao tai khoan va cap quyen cho database -------------------------
+
+CREATE USER <Ten nguoi dung> with PASSWORD 'chon mat khau';
+ 
+CREATE DATABASE <Ten database>
+ 
+GRANT ALL PRIVILEGES ON DATABASE <Ten database> TO <Nguoi dung>;
+
+
+psql -U <Ten Nguoi dung moi tao > -h localhost  -d <Ten database>
+
+
+---------------Xoa Access privileges ----------------
+1. Truy cap vao database 
+2.REASSIGN OWNED BY <ten user muon xoa> TO <quyen cao nhat<postgres>>;
+3.DROP OWNED BY <ten user muon xoa>;
+4.DROP ROLE doomed_role;
+
+
+
+----------------------Su dung Postgreas
+
+Lenh: \c <ten datavbase> thao tac voi database
+
+--------------Xoa databse----------------------
+
+
+
+SELECT pg_terminate_backend(pg_stat_activity.pid)
+FROM pg_stat_activity
+WHERE pg_stat_activity.datname = '<Ten database con xoa>'
+  AND pid <> pg_backend_pid();
+
+
+drop database <ten database can xoa>
+
+
+----------------Thao tac voi Database-----------------
+1. \dt :Liet ke cac table hien co trong database
+
+2.CREATE EXTENSION "uuid-ossp"; : neu muon tao truong ID tu dong generay ID phai vao database va tao
+
+
+
+---------------------Them du lieu tu NodeJs vao database--------------------------
+ db.query("INSERT INTO taikhoan(username,password,lastname,firstname,hinhanh)values($1,$2,$3,$4,$5)",
+        [UserName,PassWord,LastName,FistName,filename],(err,result)=>{
+            if(err) return console.log(err+'');
+            console.log(result)
+        });
+
+
+---------------------------------
+killall -9 node: su ly khi port dang mo
+
+
+
+SELECT * FROM table WHERE dt::date = '2011-01-01': lay voi dieu kien la ngay thang nam 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,9 @@
+apt list --installed  :Liet ke cac goi packages da cai tren may
+sudo apt-get update: update lai cac packages
+sudo passwd -l <Ten user>: dung de khoa mat khau tai khoan
+sudo passwd -u <Ten user>: dung de mo lai toan khoan khi dung cau lenh "sudo passwd -l <Ten user>" 
+sudo userdel -f <Te user>: Xoa tai khoan 
+sudo adduser <Ten user>:Tao tai khoan
+sudo adduser <Ten user> <ten groups> :Them nguoi dung vao group
+chfn <ten user>:thay doi thong tin tai khoan
+

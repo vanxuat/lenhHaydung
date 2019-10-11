@@ -1,0 +1,28 @@
+git log: xem  nhat ki
+git show <id> :xem nhat ki cua mot commit
+git branch: kiem tra ten nhanh hien tai
+git checkout -b <Ten nhanh>:tao mot nhan moi
+git checkout <ten nhanh>: chon nhanh de lam viec
+git merge <Ten nhanh can merge>:chuyen cac commit tu nhanh b va nhanh a
+git branch -D <Ten Nhanh>: Xoa mot nhanh
+git reset --mixed <ID commit>:Quay tro lai commit truoc do
+git remote -v :kiem tra remote respontori
+ls -al:liet ke cac file an
+ls .git:liet ke cac file trong git
+
+git remote set-url <URL>: thay doi remote responetory
+
+git config --global credential.helper "cache--timeout=<dat thoi gian >: set thoi gian cho tai khoan de khong phai nhap lai
+
+git push origin <ten nhanh muon push len>: dua code len mot nhanh
+
+
+
+
+
+
+
+
+
+
+
