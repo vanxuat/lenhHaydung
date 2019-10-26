@@ -7,7 +7,13 @@ sudo adduser <Ten user>:Tao tai khoan
 sudo adduser <Ten user> <ten groups> :Them nguoi dung vao group
 chfn <ten user>:thay doi thong tin tai khoan
 
+sudo -i :truy cap vao root
+sudo -s : try cap vao root
+
+--------------------------------------------------------------------------
 -------- Thay doi boot khi cai song song voi Ubuntu
 sudo nano /etc/default/grub
 sudo update-grub
 --------
+
+

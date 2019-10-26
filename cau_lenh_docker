@@ -14,9 +14,52 @@ docker start {new_container_name}: Khởi động một container
 
 docker exec -it {new_container_name} /bin/bash: Truy cập vào container đang chạy
 
-docker network ls -> liệt kê các Network
-
 docker rm $(docker ps -a -q) :  (Xóa tất cả các docker)
 
-
 docker exec -it <CONTAINER_ID> sh: Truy cap vao WORKDIR
+
+docker run -it --volumes-from <Container khac> <imagesID>
+
+docker volume create <Ten o Dia> : tao mot o dia moi tren container
+
+docker volume rm <Ten o Dia> : tao o dai moi
+
+docker logs <ten conatainer> : kiem tra logs cua conatainer
+
+docker run -it -rm -e <TenBien>=<Value> -e <TenBien>="<Value>" <ten image> : tao bien moi truong cho container (goi thong qua $<tenBien>)
+
+--------------Tao o dia va gan vao thu muc tren may tinh -----------------------
+docker create --opt device=<duong dan may host> --opt type=none --opt o=bind <Ten o dia>
+docker run -it -v <ten O dia>:<duong dan cua container> <ten image>
+docker run -it --mount source=<ten o dia tao trong container>, target=<duong dan cua conatiner> <ten image> : gan o dia cho container
+
+--------------Tao mang trong container----------------------------------------
+docker network ls -> liệt kê các Network
+docker run -it -name <ten container> -p 8888:80 <ten images> :map port cua may host vao container
+docker network create --driver <loai mang> <ten mang> : tao ra mot mang moi
+docker network rm <ten net work> : xoa ten mang
+docker run -it --name <ten container> --network <ten network ket noi> <ten image> : tao cotainer ket noi vao network
+docker network connect <ten mang> <ten container muon ket noi vao mang> : ket noi container vao mang khi da khoi tao
+
+---------------------------------------------------
+docker image history <images ID> : tra cuu lich su Images
+docker inspect  <ten images> : tra cuu thong tin cua images
+docker diff <ten conatianer> : thay doi cau truc thu muc trorng qua trinh chay
+docker logs -f <ten conatiner> : giam sat logs cua conatainer
+docker stats <ten container>  <ten conatiner>  : giam sat su dung tai nguyen conatiner
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
