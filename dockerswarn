@@ -1,0 +1,16 @@
+-docker swarm init --advertise-addr=<dia chi ip> : dand ki mot machine lam leader
+-  docker swarm join-token worker : lay ma cua node lesader de cac node khong tham gia vao
+- docker service create --replicas <so luong container> -p port:port --name <ten service> <image>: Tao mot service moi 
+- docker service ls  : danh sach sevice
+- docker service ps testservice : liet ke danh sach container trong service
+-docker service logs <ten service> : log 
+-docker stats :  xem thong tin thong ke he thong
+-docker service rm <ten service> : Xoa dich vu
+-docker service scale <ten sevice:so luong> : thay doi do luong container
+-docker service update --image=<Ten image muon thay doi > <ten service can thay doi image>: thay doi image cho service  
+
+
+--------------------------Mang trong docker-machine---------------------------------------
+
+ -docker service create --replicas 3 --name <ten service> -p 8888:80 --network <ten mang muon dung> <ten image> : tao sevice ket noi vao mang ingress
+-docker network create -d overlay --attachable <ten mang> : cho phep cac container khong thuoc node quan ly nhung van co the tham gia vao mang duoc     

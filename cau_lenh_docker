@@ -47,11 +47,9 @@ docker inspect  <ten images> : tra cuu thong tin cua images
 docker diff <ten conatianer> : thay doi cau truc thu muc trorng qua trinh chay
 docker logs -f <ten conatiner> : giam sat logs cua conatainer
 docker stats <ten container>  <ten conatiner>  : giam sat su dung tai nguyen conatiner
+docker cp <thu muc tai may host> <ten container>:<thu muc trong container> : copy mot thu muc tu may host vao container
 
-
-
-
-
+docker commit  <ten container> <ten images tu dat:version> : tao mot images tu mot container
 
 
 
