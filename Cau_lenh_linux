@@ -17,5 +17,5 @@ sudo update-grub
 --------
 
 
-ssh-keygen -t rsa -C "<ten>" :rendom ra mot key
+ssh-keygen -t rsa -C "<ten>" :rendom ra mot
 
