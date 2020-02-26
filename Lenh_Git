@@ -4,7 +4,8 @@ git branch: kiem tra ten nhanh hien tai
 git checkout -b <Ten nhanh>:tao mot nhan moi
 git checkout <ten nhanh>: chon nhanh de lam viec
 git merge <Ten nhanh can merge>:chuyen cac commit tu nhanh b va nhanh a
-git branch -D <Ten Nhanh>: Xoa mot nhanh
+git branch -d <Ten Nhanh>: Xoa mot nhanh
+git branch -D <Ten Nhanh>: Xoa mot nhanh khong can phai merge
 git reset --mixed <ID commit>:Quay tro lai commit truoc do
 git remote -v :kiem tra remote respontori
 ls -al:liet ke cac file an
