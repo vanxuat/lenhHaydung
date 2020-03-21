@@ -19,3 +19,9 @@ sudo update-grub
 
 ssh-keygen -t rsa -C "<ten>" :rendom ra mot
 
+
+----------------------------------------------------
+su <ten user >: chuyen qua ten nguoi dung khac
+groups : liet ke cac group dang co
+sudo passwd <ten user>: doi mat khau cho user 
+
