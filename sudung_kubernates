@@ -1,0 +1,5 @@
+microk8s.kubectl version --short : kiem tra phien ban
+microk8s.kubectl cluster-info : kiem tra thong tin 
+microk8s.kubectl get node : lay thong tin cac node
+microk8s.kubectl describe  node/<ten node> : xem thong tin chi tiet cua mot node
+kubeadm init --apiserver-advertise-address=172.16.10.100 --pod-network-cidr=192.168.0.0/16 : Dang ki o tren may master, pod-network-cidr : day la plucin mang 
