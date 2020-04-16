@@ -3,3 +3,7 @@ microk8s.kubectl cluster-info : kiem tra thong tin
 microk8s.kubectl get node : lay thong tin cac node
 microk8s.kubectl describe  node/<ten node> : xem thong tin chi tiet cua mot node
 kubeadm init --apiserver-advertise-address=172.16.10.100 --pod-network-cidr=192.168.0.0/16 : Dang ki o tren may master, pod-network-cidr : day la plucin mang 
+
+kubeadm token create --print-join-command : Lay ma token tren may master cho cac client ket noi vao
+kubectl get node -o wide : lay thong tin chi tiet cua cac node
+kubectl api-resources

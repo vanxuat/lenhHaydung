@@ -18,7 +18,7 @@ docker rm $(docker ps -a -q) :  (Xóa tất cả các docker)
 
 docker exec -it <CONTAINER_ID> sh: Truy cap vao WORKDIR
 
-docker run -it --volumes-from <Container khac> <imagesID>
+docker run -it --volumes-from <Container khac> <imagesID>: chia se du lieu tu mot conyainer khac
 
 docker volume create <Ten o Dia> : tao mot o dia moi tren container
 
@@ -29,8 +29,8 @@ docker logs <ten conatainer> : kiem tra logs cua conatainer
 docker run -it -rm -e <TenBien>=<Value> -e <TenBien>="<Value>" <ten image> : tao bien moi truong cho container (goi thong qua $<tenBien>)
 
 --------------Tao o dia va gan vao thu muc tren may tinh -----------------------
-docker create --opt device=<duong dan may host> --opt type=none --opt o=bind <Ten o dia>
-docker run -it -v <ten O dia>:<duong dan cua container> <ten image>
+docker volume create --opt device=<duong dan may host> --opt type=none --opt o=bind <Ten o dia>: gan thu muc may host vao o dia
+docker run -it -v <ten O dia>:<duong dan cua container> <ten image> : danh cho truong hop tao o dia gan thu muc may host cho o dia
 docker run -it --mount source=<ten o dia tao trong container>, target=<duong dan cua conatiner> <ten image> : gan o dia cho container
 
 --------------Tao mang trong container----------------------------------------
@@ -51,6 +51,7 @@ docker cp <thu muc tai may host> <ten container>:<thu muc trong container> : cop
 
 docker commit  <ten container> <ten images tu dat:version> : tao mot images tu mot container
 
+----------------------------------------------------------------------
 
 
 

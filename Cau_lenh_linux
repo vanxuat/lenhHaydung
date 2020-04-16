@@ -14,14 +14,57 @@ sudo -s : try cap vao root
 -------- Thay doi boot khi cai song song voi Ubuntu
 sudo nano /etc/default/grub
 sudo update-grub
---------
+------------------------------------------------------------------
 
 
 ssh-keygen -t rsa -C "<ten>" :rendom ra mot
+---------------------------------------
+
+- tim kiem noi phan mem da cai dat
+	whereis -l java
 
 
 ----------------------------------------------------
 su <ten user >: chuyen qua ten nguoi dung khac
 groups : liet ke cac group dang co
 sudo passwd <ten user>: doi mat khau cho user 
+
+----------------------------------------------------
+10.How To Install Software in Ubuntu Using the Source Code
++ ./configure
++ make
++ sudo make install
+--------------------------------------------------
+9. How To Install Software in Ubuntu Using dpkg
+sudo dpkg -i <ten file co duoi.deb >-- de cai dat
+sudo apt-get install -f : chay se fix tat ca cac loi
+
+--------------------------------------------------
+
+11. Cai dat phan mem voi duoi file <.bundle>
+
+- sudo apt install gcc build-essential
+- sudo +x <ten file co duoi la .bundle>
+sudo ./<ten file co duoi la .bundle>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
